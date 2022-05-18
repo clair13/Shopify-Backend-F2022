@@ -1,0 +1,44 @@
+<div id="locations">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>
+          City
+        </td>
+        <td>
+          Address
+        </td>
+        <td>
+          Show
+        </td>
+        <td>
+          Edit
+        </td>
+        <td>
+          Delete
+        </td>
+      </tr>
+    </thead>
+    <% locations.each do |location| %>
+      <tbody>
+        <tr>
+          <td>
+            <%= location.city %>
+          </td>
+          <td>
+            <%= location.address %>
+          </td>
+          <td>
+            <%= link_to "Show", location, class:"btn btn-light"%>
+          </td>
+          <td>
+            <%= link_to "Edit", edit_location_path(location), class:"btn btn-light"%>
+          </td>
+          <td>
+            <%= button_to "Delete", location, method: :delete, class:"btn btn-danger"%>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>

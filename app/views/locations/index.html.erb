@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Locations</h1>
+
+<%= link_to "New location", new_location_path, class: "btn btn-primary" %>
+
+<%= render 'locations_table', locations: @locations %>
+
+

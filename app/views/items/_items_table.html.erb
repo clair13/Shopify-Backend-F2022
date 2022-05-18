@@ -33,6 +33,7 @@
           </td>
           <td>
             <%= item.location_id.present? ? Location.find(item.location_id).city : "Not assigned to a Location" %>
+          </td>
           <td>
             <%= item.quantity %>
           </td>

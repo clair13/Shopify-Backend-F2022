@@ -3,7 +3,10 @@
 <h1>Locations</h1>
 
 <%= link_to "New location", new_location_path, class: "btn btn-primary" %>
+<%= link_to "Items", items_path, class: "btn btn-primary p-1" %>
 
 <%= render 'locations_table', locations: @locations %>
 
+
+<%= link_to "Back to Homepage", root_path, class: "btn btn-primary p-1" %>
 

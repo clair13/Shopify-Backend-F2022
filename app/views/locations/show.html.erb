@@ -2,6 +2,13 @@
 
 <%= render @location %>
 
+<h2>All items on this Location</h2>
+<% if !@item.empty? %>
+  <%= render 'items/items_table', items: @item %>
+<% else %>
+  <p>No items assigned to this Location</p>
+<% end %>
+
 <div>
   <%= link_to "Edit this location", edit_location_path(@location), class: "btn btn-primary p-1" %>
   <%= link_to "Back to locations", locations_path, class: "btn btn-primary p-1" %>

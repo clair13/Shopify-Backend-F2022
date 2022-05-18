@@ -19,4 +19,9 @@
     <%= item.description %>
   </p>
 
+  <p>
+    <strong>Location:</strong>
+    <%= item.location.present? ? item.location.city : "Not assigned to a Location" %>
+  </p>
+
 </div>
